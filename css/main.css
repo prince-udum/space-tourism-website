@@ -1,0 +1,660 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+:root {
+  /* colors */
+  --dark-blue: #0b0d17;
+  --light-blue: #d0d6f9;
+  --white: #ffffff;
+
+  /* other vars */
+  --fluid-width: 90vw;
+  --max-width: 1050px;
+  --transition: all 0.3s ease;
+  --heading-font: "Bellefair", serif;
+  --subheading-font: "Barlow Condensed", sans-serif;
+  --body-font: "Barlow", sans-serif;
+}
+
+body {
+  background: var(--white);
+  font-family: var(--body-font);
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  /* margin-bottom: 1.38rem; */
+  font-family: var(--heading-font);
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 150px;
+}
+
+h2 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 28px;
+  font-family: var(--subheading-font);
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* project css */
+/*
+===================
+    Home Page
+=================== 
+*/
+
+.hero-img {
+  background: url(../assets/home/background-home-mobile.jpg) center/cover
+    no-repeat;
+  min-height: 100vh;
+}
+
+nav {
+  height: 6rem;
+}
+
+.nav-center {
+  width: var(--fluid-width);
+  /* max-width: var(--max-width); */
+  padding: 1.5rem 0 0;
+  margin: 0 auto;
+}
+
+.navlinks {
+  transform: translateX(100%);
+  width: 67vw;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  /* transition: var(--transition); */
+}
+
+.show-navlinks {
+  transform: translateX(0);
+}
+
+.close-menu {
+  width: 20px;
+  align-self: flex-end;
+}
+
+.navlinks a {
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  padding: 0.65rem 0;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+ul .no {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 2.5rem;
+}
+
+.container {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero {
+  color: var(--light-blue);
+}
+
+.text {
+  margin: 1rem 0 5.5rem;
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 15px;
+  padding: 0 0.5rem;
+  line-height: 25px;
+  color: var(--light-blue);
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: var(--white);
+  border-radius: 50%;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  color: var(--dark-blue);
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.circle::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(1.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.circle:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    height: 8rem;
+    padding-left: 2rem;
+  }
+
+  .logo {
+    width: 3rem;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .hero-img {
+    background: url(../assets/home/background-home-tablet.jpg) center/cover
+      no-repeat;
+    min-height: 100vh;
+  }
+
+  .text {
+    margin: 4rem 0 9rem;
+  }
+
+  h1 {
+    color: var(--white);
+    font-size: 150px;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 16px;
+    padding: 0;
+    max-width: 445px;
+    margin: 0 auto;
+    line-height: 28px;
+  }
+  .sub-heading {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  .circle {
+    width: 242px;
+    height: 242px;
+    font-size: 2rem;
+  }
+
+  .close-menu {
+    display: none;
+  }
+
+  .navlinks {
+    transform: unset;
+    width: unset;
+    height: unset;
+    position: unset;
+    top: 0;
+    right: 0;
+    padding: 0 3rem;
+  }
+
+  .navlinks a {
+    font-size: 14px;
+    padding: 2rem 0;
+    position: relative;
+    display: inline-block;
+  }
+
+  .navlinks a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--white);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+
+  .navlinks a:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navlinks a:active::after {
+    opacity: 1;
+    visibility: visible;
+    background: var(--light-blue);
+  }
+
+  .navlinks ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  ul .no {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  nav {
+    padding: 2rem 0 0 2rem;
+  }
+
+  .nav-center {
+    position: relative;
+  }
+
+  ul .no {
+    display: inline;
+  }
+
+  .desktop-line {
+    height: 1px;
+    width: 473px;
+    background: var(--white);
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 350px;
+    z-index: 3;
+  }
+
+  .hero-img {
+    background: url(../assets/home/background-home-desktop.jpg) center/cover
+      no-repeat;
+
+    height: 110vh;
+  }
+
+  .navlinks {
+    padding: 0 10rem 0 7rem;
+  }
+
+  .text {
+    margin: 0;
+    text-align: left;
+  }
+
+  .hero .container {
+    display: flex;
+    margin-top: 10rem;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .circle {
+    margin: 0;
+  }
+
+  .sub-heading {
+    letter-spacing: 4.72px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-img {
+    height: 900px;
+  }
+
+  .hero .container {
+    display: flex;
+    margin-top: 20rem;
+  }
+
+  .circle {
+    width: 274px;
+    height: 274px;
+  }
+}
+
+/*
+===================
+    About Page
+=================== 
+*/
+
+.about-page-img {
+  background: url(../assets/destination/background-destination-mobile.jpg)
+    center/cover no-repeat;
+
+  min-height: 100vh;
+}
+
+.destination {
+  color: var(--white);
+  text-align: center;
+}
+
+.planets img {
+  width: 170px;
+  object-fit: cover;
+  display: none;
+  margin: 0 auto;
+}
+
+/* .destination .active {
+  display: block;
+} */
+
+.destination .no {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.tabs {
+  margin-top: 2rem;
+}
+
+.info-container {
+  margin-top: 2rem;
+}
+
+.tab-btn-container {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: center;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-size: 14px;
+  font-family: var(--subheading-font);
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tab-btn.active::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: var(--white);
+}
+
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: var(--white);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.tab-btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tab-btn:active::after {
+  visibility: visible;
+  opacity: 1;
+  background: var(--light-blue);
+}
+
+.info {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-blue);
+}
+
+.distance-container {
+  padding: 2rem 0 4rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.subheading-2 {
+  font-size: 28px;
+  font-family: var(--heading-font);
+  display: block;
+}
+
+.subheading-3 {
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  font-family: var(--subheading-font);
+  color: var(--light-blue);
+}
+
+/* hide planets */
+
+.planets img {
+  display: none;
+}
+
+.planet-info-container {
+  display: none;
+}
+
+.planet-info-container.active {
+  display: block;
+}
+
+.planets img.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .about-page-img {
+    background: url(../assets/destination/background-destination-tablet.jpg)
+      center/cover no-repeat;
+    min-height: 100vh;
+  }
+
+  .planet-info-container {
+    max-width: 575px;
+    margin: 0 auto;
+  }
+
+  .planets img {
+    width: 300px;
+  }
+  .destination .no {
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  .destination .sub-heading {
+    text-align: left;
+  }
+  .tabs {
+    margin-top: 4rem;
+  }
+  .info-container {
+    margin-top: 4rem;
+  }
+  .info {
+    padding: 2rem 0;
+  }
+
+  .info h3 {
+    font-size: 80px;
+  }
+
+  .tab-btn {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+  }
+
+  .planet-info-container p {
+    max-width: 573px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .distance-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 6rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .about-page-img {
+    background: url(../assets/destination/background-destination-desktop.jpg)
+      center/cover no-repeat;
+
+    min-height: 100vh;
+  }
+
+  .tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 10rem;
+  }
+
+  .planets img {
+    width: 445px;
+  }
+
+  .info h3 {
+    font-size: 100px;
+  }
+
+  .destination {
+    text-align: left;
+  }
+
+  .tab-btn-container {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: start;
+  }
+
+  .info p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .distance-container {
+    column-gap: 4rem;
+    justify-content: start;
+  }
+}
