@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Space tourism website</title>
+  </head>
+  <body>
+    <main>
+      <div class="tech-page-img">
+        <nav>
+          <div class="nav-center">
+            <div class="nav-header">
+              <!-- logo -->
+              <a href="index.html" class="logo-container">
+                <img src="./assets/shared/logo.svg" alt="logo" class="logo" />
+              </a>
+
+              <!-- hamburger -->
+              <img
+                src="./assets/shared/icon-hamburger.svg"
+                alt="mobile menu"
+                class="open-menu"
+              />
+            </div>
+
+            <div class="desktop-line"></div>
+            <!-- navlinks -->
+            <div class="navlinks">
+              <img
+                src="./assets/shared/icon-close.svg"
+                alt="mobile menu"
+                class="close-menu"
+              />
+              <ul>
+                <li>
+                  <a href="index.html"><span class="no">00</span> Home</a>
+                </li>
+                <li>
+                  <a href="destination.html"
+                    ><span class="no">01</span> Destination</a
+                  >
+                </li>
+                <li>
+                  <a href="crew.html"><span class="no">02</span> Crew</a>
+                </li>
+                <li>
+                  <a href="technology.html" class="active"
+                    ><span class="no">03</span> Technology</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <section class="tech extra-margin">
+          <div class="container extra-margin">
+            <h5 class="sub-heading">
+              <span class="no">03</span> Space launch 101
+            </h5>
+
+            <div class="tech-wrapper">
+              <article class="tech-images">
+                <!-- launch vehicle img -->
+                <picture class="tech-image active" id="launch">
+                  <source
+                    media="(min-width:1300px)"
+                    srcset="
+                      ./assets/technology/image-launch-vehicle-portrait.jpg
+                    "
+                  />
+                  <img
+                    src="./assets/technology/image-launch-vehicle-landscape.jpg"
+                    alt="launch"
+                  />
+                </picture>
+
+                <!-- spaceport img -->
+                <picture class="tech-image" id="spaceport">
+                  <source
+                    media="(min-width:1300px)"
+                    srcset="./assets/technology/image-spaceport-portrait.jpg"
+                  />
+                  <img
+                    src="./assets/technology/image-spaceport-landscape.jpg"
+                    alt="launch"
+                  />
+                </picture>
+
+                <!-- space capsule img -->
+                <picture class="tech-image" id="capsule">
+                  <source
+                    media="(min-width:1300px)"
+                    srcset="
+                      ./assets/technology/image-space-capsule-portrait.jpg
+                    "
+                  />
+                  <img
+                    src="./assets/technology/image-space-capsule-landscape.jpg"
+                    alt="launch"
+                  />
+                </picture>
+              </article>
+
+              <article class="tech-info-container">
+                <div class="tech-circles">
+                  <button class="tech-circle active" data-id="launch">1</button>
+                  <button class="tech-circle" data-id="spaceport">2</button>
+
+                  <button class="tech-circle" data-id="capsule">3</button>
+                </div>
+
+                <!-- single member -->
+
+                <div class="tech-info active" id="launch">
+                  <span class="subheading-3">The terminology...</span>
+                  <h3>Launch vehicle</h3>
+                  <p>
+                    A launch vehicle or carrier rocket is a rocket-propelled
+                    vehicle used to carry a payload from Earth's surface to
+                    space, usually to Earth orbit or beyond. Our WEB-X carrier
+                    rocket is the most powerful in operation. Standing 150
+                    metres tall, it's quite an awe-inspiring sight on the launch
+                    pad!
+                  </p>
+                </div>
+
+                <!-- end of single member -->
+
+                <!-- single member -->
+
+                <div class="tech-info" id="spaceport">
+                  <span class="subheading-3">The terminology...</span>
+                  <h3>Spaceport</h3>
+                  <p>
+                    A spaceport or cosmodrome is a site for launching (or
+                    receiving) spacecraft, by analogy to the seaport for ships
+                    or airport for aircraft. Based in the famous Cape Canaveral,
+                    our spaceport is ideally situated to take advantage of the
+                    Earth’s rotation for launch.
+                  </p>
+                </div>
+
+                <!-- end of single member -->
+
+                <!-- single member -->
+
+                <div class="tech-info" id="capsule">
+                  <span class="subheading-3">The terminology...</span>
+                  <h3>Space capsule</h3>
+                  <p>
+                    A space capsule is an often-crewed spacecraft that uses a
+                    blunt-body reentry capsule to reenter the Earth's atmosphere
+                    without wings. Our capsule is where you'll spend your time
+                    during the flight. It includes a space gym, cinema, and
+                    plenty of other activities to keep you entertained.
+                  </p>
+                </div>
+
+                <!-- end of single member -->
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- javascript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
